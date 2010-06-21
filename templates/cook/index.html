@@ -1,0 +1,34 @@
+﻿$def with (entries)
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Home</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="$:static/style/default.css">       
+    </head>
+    <body>
+        <h2>菜谱</h2>				
+		<div align="center">
+		    <div id="box">		  
+				<div id="content">     
+				    $for entry in entries
+				        <div class="item_one" align="left">
+				        <div class="item">
+					        <div class="cm"><a href='/cook/view/$:entry.id/'><h3>$:entry.cm.strip()</h3></a></div>
+					        <div style="margin-left:10px">
+					            <div class="td">特点：$:entry.td.strip()</div>
+					            <div class="yl">原料：$:entry.yl.strip()</div>
+					            <div class="zzff">制作方法：<br/>$:entry.zzff.replace('\n','<br/>').strip()</div>
+				            </div>
+				        </div>
+				        <div class="sep_dot"></div>
+				    </div>
+				
+				<div class="sep10"></div>
+				</div>
+		      
+		        <br clear="all">
+		    </div>   
+        </div>
+    </body>
+</html>

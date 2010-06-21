@@ -10,5 +10,5 @@ sys.path.append('./core/controllers')
 urls = url.urls
 
 if __name__ == "__main__":
-    app = web.application(urls, globals())
+    app = web.application(urls, globals(),autoreload=True)
     app.run()
