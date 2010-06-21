@@ -1,16 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from core.settings import render
-from core.settings import db
+from core.config.settings import render
+from core.config.settings import mysqldb
 
 
 class Index:
 
     def GET(self):
-        entries = db.select('table1')
-        name = 'Bob'
-        return render.index(name,entries)
-        # 请求 index 模板，可以按目录结构来写
-        # 如 rendr.default.index()，代表请求 default 目录下的 index 模板
-        # 模板的扩展名有要求，.html 或者 .xml 都可以
+        pageSize = 10
+        entries = mysqldb.select('cp',what='id,cm,td,yl,zzff',where='id<20',order='id desc',limit=pageSize)
+        return render.index(entries)        

@@ -1,1 +1,13 @@
 h1 {border:1px solid #f00;}
+
+.item {
+    margin:10px;
+    font-size:12px;
+    line-height:140%;
+}
+
+.cm {
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:6px;
+}

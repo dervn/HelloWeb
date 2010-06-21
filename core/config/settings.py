@@ -22,8 +22,10 @@ else:
     render = web.template.render('templates/', cache=False)
     web.template.Template.globals = glovars
 
-#db = web.database(dbn='mysql', user='username', pw='password', db='dbname')
-
+#mysql 
+mysqldb = web.database(dbn='mysql', user='root', pw='', db='cook',\
+                       host='localhost',port=3306,charset='utf8',use_unicode=False)
+#sqlite
 db = web.database(dbn='sqlite', db='db/test.sqlite')
 
 if debug:

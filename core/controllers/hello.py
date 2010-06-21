@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from core.settings import render
-from core.settings import db
+from core.config.settings import render
+from core.config.settings import db
 
 
 class Index:
