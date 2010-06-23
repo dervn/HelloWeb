@@ -10,6 +10,7 @@ class Index:
     ''' '''
     def GET(self):        
         entries = cook.get_cuisines()
+        title = '菜谱首页'
         return render.cook.index(entries) 
     
 class List:

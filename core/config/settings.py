@@ -19,7 +19,7 @@ if template == 'mako':
     render = render_mako(directories=['templates'],input_encoding='utf-8',output_encoding='utf-8')
 else:
     #setting template and cache directory 
-    render = web.template.render('templates/', cache=False)
+    render = web.template.render('templates/',base='base',cache=False)
     web.template.Template.globals = glovars
 
 #mysql 
