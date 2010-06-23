@@ -28,6 +28,9 @@ mysqldb = web.database(dbn='mysql', user='root', pw='', db='cook',\
 #sqlite
 db = web.database(dbn='sqlite', db='db/test.sqlite')
 
+#per_page
+pagesize = 10
+
 if debug:
     print render
     print web.template.Template.globals
