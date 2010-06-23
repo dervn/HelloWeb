@@ -4,6 +4,12 @@
 from core.config.settings import mysqldb
 from core.config.settings import pagesize
 
+def get_cuisines():
+    return mysqldb.select('cp',what='cx,count(cx) as count',group='cx', order='count desc')
+
+def get_cuisine(cx):
+    return mysqldb.select('cp',what='id,cm,td,yl,zzff',where='cx=$cx', order='id desc',vars=locals())
+
 def get_top():
     """get top """
     return mysqldb.select('cp',what='id,cm,td,yl,zzff',limit=pagesize)

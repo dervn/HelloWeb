@@ -14,12 +14,7 @@
 				    $for entry in entries
 				        <div class="item_one" align="left">
 				        <div class="item">
-					        <div class="cm"><a href='/cook/view/$:entry.id/'><h3>$:entry.cm.strip()</h3></a></div>
-					        <div style="margin-left:10px">
-					            <div class="td">特点：$:entry.td.strip()</div>
-					            <div class="yl">原料：$:entry.yl.strip()</div>
-					            <div class="zzff">制作方法：<br/>$:entry.zzff.replace('\n','<br/>').strip()</div>
-				            </div>
+					        <div class="cm"><a href='/cook/$:entry.cx.strip()/'><h3>$:entry.cx ($:entry.count)</h3></a></div>					        
 				        </div>
 				        <div class="sep_dot"></div>
 				    </div>
