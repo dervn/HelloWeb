@@ -1,1 +1,1 @@
-python code.py 1234
+python app/code.py 1234

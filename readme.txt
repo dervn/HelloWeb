@@ -1,10 +1,10 @@
-µã»÷run.batÔËÐÐweb.pyµÄÄÚÖÃserver
+ç‚¹å‡»run.batè¿è¡Œweb.pyçš„å†…ç½®server
 
 ngnix
 
 url.rewrite-once = (
-¡°^/favicon.ico$¡± => ¡°/static/favicon.ico¡±,
-¡°^/static/(.*)$¡± => ¡°/static/$1¡å,
-¡°^/(.*)$¡± => ¡°/code.py/$1¡å,
+â€œ^/favicon.ico$â€ => â€œ/static/favicon.icoâ€,
+â€œ^/static/(.*)$â€ => â€œ/static/$1â€³,
+â€œ^/(.*)$â€ => â€œ/code.py/$1â€³,
 )
 
