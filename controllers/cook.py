@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from core.config.settings import render
-from core.config.settings import debug
-from core.models import cook
-from core.lib.function import urldecode
+from config.settings import * 
+from models import cook
+from lib.function import urldecode
 
 class Index:
     ''' '''

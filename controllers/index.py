@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from core.config.settings import render
-from core.config.settings import mysqldb
-
+from config.settings import * 
 
 class Index:
 

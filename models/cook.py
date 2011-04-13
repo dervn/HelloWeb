@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from core.config.settings import mysqldb
-from core.config.settings import pagesize
+from config.settings import * 
 
 def get_cuisines():
     return mysqldb.select('cp',what='cx,count(cx) as count',group='cx', order='count desc')
